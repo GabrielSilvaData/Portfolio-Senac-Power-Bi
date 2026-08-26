@@ -23,8 +23,9 @@ O projeto simula um cenário de vendas de uma rede de lojas, permitindo acompanh
 
 ## 📥 Downloads
 
-[**⬇️ Baixar Dashboard (.pbix)**](VendasSemanais.pbix)  
-[**⬇️ Baixar Base de Dados**](planilha_vendas.xlsx)
+- [**⬇️ Baixar Dashboard (.pbix)**](Relatório_Vendas_V2.pbix)
+- [**⬇️ Baixar Base de Dados de Vendas**](planilha_vendas.xlsx)
+- [**⬇️ Baixar Base de Dados de Cadastro de Lojas**](cadastro_lojas.xlsx)
 
 > Para abrir o arquivo `.pbix`, é necessário ter o **Power BI Desktop** instalado.
 
