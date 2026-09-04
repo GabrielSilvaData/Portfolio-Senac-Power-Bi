@@ -1,151 +1,149 @@
-# 📊 Dashboard de Vendas Semanais | Power BI
+# 📊 Dashboard de Análise de Estacionamento | Power BI
 
 ## 🎓 Sobre o Projeto
 
-Este dashboard foi desenvolvido **durante uma aula do curso de Power BI do Senac**, com o objetivo de aplicar na prática conceitos de **Business Intelligence, Power Query, modelagem de dados, DAX e visualização de informações**.
+Este dashboard foi desenvolvido em **Power BI** com o objetivo de aplicar conceitos de **Business Intelligence, Power Query, modelagem de dados, DAX e visualização de informações** em um cenário de gestão de estacionamento.
 
-O projeto simula um cenário de vendas de uma rede de lojas (Contoso), permitindo acompanhar o faturamento semanal, identificar os principais vendedores e produtos, analisar a evolução das vendas ao longo dos dias e comparar o desempenho entre diferentes categorias de produtos.
+O projeto permite analisar o desempenho operacional e financeiro do estacionamento, acompanhando informações como **faturamento, descontos, ticket médio, duração das permanências, regiões, bairros, métodos de pagamento, clientes e características dos veículos**.
+
+O dashboard foi estruturado em duas páginas principais, permitindo uma visão geral da operação e uma análise mais detalhada dos resultados financeiros.
 
 ## 🎯 Objetivo do Projeto
 
-Desenvolver um dashboard interativo para acompanhar e analisar as vendas semanais, permitindo identificar os principais vendedores e produtos, acompanhar a evolução das vendas ao longo dos dias e comparar o desempenho entre diferentes categorias de produtos.
+Desenvolver um dashboard interativo para acompanhar e analisar as operações de um estacionamento, permitindo identificar os principais indicadores financeiros e operacionais, analisar o comportamento dos clientes e veículos, comparar regiões e bairros e acompanhar o faturamento e os descontos aplicados.
 
-O objetivo é transformar os dados de vendas em informações visuais que facilitem o acompanhamento do desempenho comercial e auxiliem na tomada de decisões.
+O objetivo é transformar os dados do estacionamento em informações visuais que facilitem a análise dos resultados e auxiliem na tomada de decisões.
 
-## 📂 Bases de Dados Utilizadas
+## 📌 Principais Informações Analisadas
 
-O projeto utiliza duas bases de dados em Excel para alimentar o dashboard:
+🚗 **Operação do Estacionamento**
 
-### 📋 cadastro_lojas.xlsx
-Contém o cadastro das lojas da rede Contoso, com informações estruturais e de localização.
+* Quantidade e movimentação de veículos
+* Data e horário de entrada e saída
+* Duração das permanências
+* Turno de entrada dos veículos
+* Distribuição das operações por região e bairro
 
-| Coluna | Descrição |
-|--------|-----------|
-| ID_LOJA | Identificador único da loja |
-| Nome_Loja | Nome da loja |
-| CNPJ | Cadastro Nacional da Pessoa Jurídica |
-| Bairro | Bairro de localização |
-| Cidade | Cidade da loja |
-| Estado | Estado (UF) |
-| Região | Região geográfica do Brasil |
-| Data_Abertura | Data de inauguração da loja |
-| Contato | Telefone para contato |
-| Tipo_Loja | Classificação da loja (Física) |
+💰 **Faturamento**
 
-**Dados disponíveis:**
-- Loja Centro (Niterói/RJ) - Abertura: 15/03/2021
-- Loja Icaraí (Niterói/RJ) - Abertura: 20/08/2023
+* Faturamento total
+* Ticket médio
+* Faturamento por bairro
+* Ticket médio por região
+* Ticket médio por método de pagamento
 
----
+🏷️ **Descontos**
 
-### 📋 planilha_vendas.xlsx
+* Descontos de pernoite
+* Descontos concedidos pelo aplicativo
+* Análise dos valores de desconto aplicados
 
-#### Planilha1 - Vendas
-Contém os registros de vendas realizadas, com detalhes de produtos, clientes e vendedores.
+🚘 **Veículos**
 
-| Coluna | Descrição |
-|--------|-----------|
-| ID_LOJA | Identificador da loja (relacionamento com cadastro_lojas) |
-| ID_VENDA | Identificador único da transação |
-| Data | Data da venda |
-| ID_PRODUTO | Código do produto |
-| Produto | Nome do produto |
-| Categoria | Categoria do produto |
-| Subcategoria | Subcategoria do produto |
-| Valor (R$) | Valor unitário do produto |
-| Qtd | Quantidade vendida |
-| Meio_Pagamento | Forma de pagamento (PIX, Cartão, Dinheiro) |
-| ID_CLIENTE | Código do cliente |
-| Nome_Cliente | Nome do cliente |
-| Nome_Vendedor | Nome do vendedor responsável |
-| ID_VENDEDOR | Código do vendedor |
+* Marca dos veículos
+* Modelo dos veículos
+* Duração das permanências
+* Relação entre veículo, período e faturamento
 
-**Principais produtos comercializados:**
-- Notebook, Mouse, Teclado, Monitor, Headset, Webcam, Impressora, SSD 1TB, Cadeira Gamer
+👤 **Clientes**
 
-**Formas de pagamento:** PIX, Cartão de Crédito, Cartão de Débito, Dinheiro
-
----
-
-#### Planilha2 - Produtos
-Contém o catálogo de produtos com informações complementares.
-
-| Coluna | Descrição |
-|--------|-----------|
-| Produto | Nome do produto |
-| Categoria | Categoria do produto |
-| Subcategoria | Subcategoria do produto |
-| Preço (R$) | Preço sugerido |
-| Prioridade | Classificação (Essencial/Desejável/Opcional) |
-| Estoque | Disponibilidade em estoque (Sim/Não) |
-| Observações | Informações adicionais sobre o produto |
-
-> **Observação:** os arquivos estão disponíveis para download e podem ser utilizados para fins de estudo e reprodução do projeto.
+* Identificação dos clientes
+* Análise das operações por cliente
+* Consulta detalhada das movimentações
 
 ## Perguntas de Negócio 📌
 
-💰 **Desempenho de Vendas**
+💰 **Desempenho Financeiro**
 
-* Qual é o total de vendas no período?
-* Qual é o faturamento total?
-* As metas estabelecidas foram atingidas?
-* Quanto ainda falta para atingir a meta?
+* Qual é o faturamento total do estacionamento?
+* Qual é o ticket médio das operações?
+* Qual método de pagamento apresenta maior ticket médio?
+* Quais regiões apresentam maior ticket médio?
+* Quais bairros possuem maior faturamento?
 
-📅 **Análise Temporal**
+📍 **Análise Geográfica**
 
-* Como as vendas evoluem ao longo dos dias?
-* Quais dias apresentam maior volume de vendas?
-* Existe variação significativa das vendas entre os dias da semana?
-* Como as vendas atuais se comparam com períodos anteriores?
+* Quais regiões apresentam maior ticket médio?
+* Quais bairros concentram maior faturamento?
+* Quais são os 5 bairros com maior faturamento?
+* Quais são os 5 bairros com menor faturamento?
+* Como o desempenho varia entre as diferentes regiões?
 
-🏷️ **Produtos**
+🚗 **Análise Operacional**
 
-* Quais produtos possuem maior volume de vendas?
-* Quais produtos representam maior impacto no faturamento?
-* Existem produtos com aumento significativo de vendas?
+* Qual é a duração média das permanências?
+* Quais são os períodos/turnos com maior movimentação?
+* Como as entradas e saídas de veículos estão distribuídas?
+* Quais marcas e modelos de veículos aparecem com maior frequência?
 
-👤 **Vendedores**
+🏷️ **Descontos**
 
-* Qual vendedor concentra maior volume de vendas?
-* Como as vendas estão distribuídas entre os vendedores?
-* Existem diferenças relevantes no comportamento dos vendedores?
+* Qual é o valor total dos descontos de pernoite?
+* Quanto é concedido em descontos pelo aplicativo?
+* Qual é o impacto dos descontos no faturamento?
+* Como os descontos estão distribuídos entre as operações?
 
-📈 **Indicadores**
+💳 **Métodos de Pagamento**
 
-* Qual é o valor acumulado das vendas no período?
-* Qual foi a variação das vendas em relação ao período anterior?
-* Qual foi o desempenho por categoria de produto?
-* Como está o desempenho em relação às metas estabelecidas?
+* Qual método de pagamento apresenta maior ticket médio?
+* Como o ticket médio varia entre Dinheiro, Cartão e App?
+* Qual método de pagamento possui maior participação nas operações?
+
+## 📄 Estrutura do Dashboard
+
+### Página 1 — Visão Geral
+
+A primeira página apresenta uma visão geral das operações do estacionamento, reunindo informações sobre **movimentação de veículos, duração das permanências, regiões, bairros, turnos e dados dos clientes e veículos**.
+
+A página permite utilizar filtros e realizar análises mais específicas sobre o comportamento das operações.
+
+### Página 2 — Faturamento
+
+A segunda página possui foco na **análise financeira do estacionamento**, apresentando indicadores de faturamento, descontos e ticket médio.
+
+Entre as principais análises estão:
+
+* Faturamento total;
+* Desconto de pernoite;
+* Descontos realizados pelo aplicativo;
+* Ticket médio por método de pagamento;
+* Ticket médio por região;
+* Ranking dos 5 bairros com maior faturamento;
+* Ranking dos 5 bairros com menor faturamento;
+* Detalhamento das operações realizadas.
 
 ## Processo 📍
 
 * Importação e organização da base de dados
 * Tratamento e padronização das informações
+* Criação e organização das tabelas
 * Modelagem dos dados
 * Criação de relacionamentos
 * Criação de medidas e cálculos utilizando **DAX**
-* Desenvolvimento de KPIs de vendas
-* Criação de análises temporais
-* Desenvolvimento de ranking por vendedores
-* Desenvolvimento de ranking por produtos
+* Desenvolvimento de KPIs financeiros e operacionais
+* Criação de análises por região e bairro
+* Criação de ranking de faturamento
 * Desenvolvimento de filtros interativos
+* Criação de análises de ticket médio
+* Desenvolvimento de indicadores de descontos
 * Construção de layout estratégico e visual profissional
+* Criação de páginas auxiliares para detalhamento das informações
 
 ## 📸 Visualizações do Dashboard
 
 ### Página 1
 
-![Dashboard de Vendas Semanais - Página 1](Capturar.JPG)
+![Dashboard de Estacionamento - Página 1](Capturar1.JPG)
+
+### Página 2
+
+![Dashboard de Estacionamento - Página 2](Capturar2.JPG)
 
 ## 📥 Downloads
 
-[**⬇️ Baixar Dashboard de Vendas Semanais (.pbix)**](Relatório_Vendas_V2.pbix)
+[**⬇️ Baixar Dashboard de Estacionamento (.pbix)**](Estacionamento.pbix)
 
-[**⬇️ Baixar Base de Dados - cadastro_lojas.xlsx**](cadastro_lojas.xlsx)
-
-[**⬇️ Baixar Base de Dados - planilha_vendas.xlsx**](planilha_vendas.xlsx)
-
-> **Observação:** para abrir o arquivo `.pbix`, é necessário ter o **Power BI Desktop** instalado. As bases de dados em Excel podem ser abertas em qualquer editor de planilhas.
+> **Observação:** para abrir o arquivo `.pbix`, é necessário ter o **Power BI Desktop** instalado.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -156,18 +154,21 @@ Contém o catálogo de produtos com informações complementares.
 
 ## 💡 Insights do Projeto
 
-* Identificação dos produtos com maior volume de vendas (Notebooks, Monitores e Impressoras)
-* Análise da evolução das vendas ao longo dos dias (01 a 06 de agosto)
-* Comparação das vendas entre diferentes lojas (Centro e Icaraí)
-* Identificação dos vendedores com maior participação nas vendas
-* Análise do desempenho por categoria de produto
-* Acompanhamento do faturamento total no período
-* Monitoramento do desempenho em relação às metas estabelecidas
-* Identificação dos dias com maior e menor volume de vendas
-* Análise das formas de pagamento mais utilizadas
+* Identificação dos bairros com maior e menor faturamento
+* Comparação do ticket médio entre diferentes regiões
+* Análise dos métodos de pagamento utilizados
+* Identificação dos principais valores de descontos de pernoite
+* Análise dos descontos realizados pelo aplicativo
+* Avaliação da duração das permanências dos veículos
+* Análise da movimentação por região, bairro e turno
+* Identificação das principais marcas e modelos de veículos
+* Acompanhamento do faturamento total do estacionamento
+* Análise detalhada das operações por cliente e veículo
 
 ## 📊 Conclusão
 
-Este projeto demonstra a aplicação prática de conceitos de **Business Intelligence, Power Query, modelagem de dados, DAX e visualização de informações**, desenvolvidos durante o **curso de Power BI do Senac**.
+Este projeto demonstra a aplicação prática de conceitos de **Business Intelligence, Power Query, modelagem de dados, DAX e visualização de informações** para análise de um cenário de estacionamento.
 
-O dashboard permite uma visão geral das vendas e possibilita análises mais detalhadas por período, vendedor e produto, contribuindo para um melhor acompanhamento do desempenho comercial e para uma tomada de decisão baseada em dados.
+O dashboard permite transformar dados operacionais e financeiros em informações relevantes para acompanhamento do negócio, possibilitando análises de **faturamento, ticket médio, descontos, regiões, bairros, veículos, clientes e movimentação**.
+
+A utilização de indicadores, filtros interativos, rankings e visualizações facilita a identificação de padrões e oportunidades, contribuindo para uma **tomada de decisão baseada em dados**.
